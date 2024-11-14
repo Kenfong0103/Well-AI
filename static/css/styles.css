@@ -44,6 +44,7 @@ h3 {
     font-size: 0.85em;
     gap: 10%; /* 减小选项之间的间距 */
     flex: 1; /* 允许选项区块填充剩余空间 */
+    color: #333333; /* Dark gray text color */
 }
 
 .selection {
@@ -55,13 +56,79 @@ h3 {
 }
 
 .title {
-    background-color: #f9f9f9;
+    background-color: #001f75;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px 20px; /* 调整水平内边距 */
     font-size: 1.2em; /* 调整性别标题字体大小 */
     text-align: left; /* 使标题靠左对齐 */
     width: 39%; /* 确保宽度为100% */
+    color: #ffffff; /* Dark gray text color */
+}
+
+.titlesummary {
+    background-color: #001f75;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 20px; /* 调整水平内边距 */
+    font-size: 1.2em; /* 调整性别标题字体大小 */
+    text-align: left; /* 使标题靠左对齐 */
+    width: 100%; /* 确保宽度为100% */
+    color: #ffffff; /* Dark gray text color */
+}
+
+.titlesummary .spaced {
+    margin-right: 160px; /* Add margin between the spans */
+}
+
+.prediction-review {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.summary-box {
+    grid-row: span 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 0.85em;
+    flex-direction: column; /* Stack items vertically */
+    background-color: #b2e5ee; /* Light gray background */
+}
+
+/* Style for image and text inside cells */
+.summary-box img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.cell {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 0.65em;
+    background-color: #b2e5ee; /* Light gray background */
+}
+
+/* Style for image and text inside cells */
+.cell img {
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .options {
@@ -102,12 +169,18 @@ h3 {
 .age-Physique,
 .life-events,
 .fitness,
-.lifestyle,
-.prediction {
-    border: 2px solid #010101; /* 边框颜色 */
+.lifestyle {
+    border: 2px solid #ffffff; /* 边框颜色 */
     border-radius: 10px; /* 圆角 */
     padding: 15px; /* 内边距 */
-    margin-bottom: 50px; /* 底部间距 */
+    margin-bottom: 50px; 
+}
+
+.prediction {
+    border: 2px solid #ffffff; /* 边框颜色 */
+    border-radius: 10px; /* 圆角 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 5px; 
 }
 
 label {
@@ -164,13 +237,26 @@ button {
     font-size: 1.2em; /* 调整按钮字体大小 */
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #001f75;
     color: white;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #001f75;
+}
+
+.loading-indicator {
+    width: 100%;
+    height: 20px;
+    background-color: #4CAF50;
+    animation: loading 5s infinite;
+}
+
+@keyframes loading {
+    0% { width: 0; }
+    50% { width: 50%; }
+    100% { width: 100%; }
 }
 
 /* 媒体查询 */
@@ -207,6 +293,24 @@ button:hover {
     
     input[type="text"]{ /* Include any other input types you have */
         width: 95%; /* Set the input width to 100% */
+    }
+
+    /* Add this for the table to become 1x1 on small screens */
+    .prediction-review {
+        grid-template-columns: 1fr;
+        width: 100%; /* Make each cell take up full width */
+    }
+
+    .summary-box {
+        grid-column: 1 / 2; /* Keep it in the first column */
+        grid-row: span 4; /* Make it span 4 rows to retain 1x4 layout */
+        width: 100%; /* Full width */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .cell, .summary-box {
+        width: 100%; /* Make each cell and summary box full width */
+        height: auto; /* Allow height to adjust automatically */
     }
 
 }

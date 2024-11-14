@@ -14,23 +14,23 @@
                 <div class="personal-info">
                     <div class="selection" style="margin-top: -10px;">
                         <h2 class="title" style="margin-top: 30px;">Name</h2>
-                        <input type="text" name="name" placeholder="Enter your name" required value="{{ request.form.get('name', '') }}">
+                        <input type="text" name="name" placeholder="Enter your name" required class="required-input" value="{{ request.form.get('name', '') }}">
 
                         <h2 class="title" style="margin-top: 30px;">Address</h2>
-                        <input type="text" name="address" placeholder="Enter your address" required value="{{ request.form.get('address', '') }}">
+                        <input type="text" name="address" placeholder="Enter your address" required class="required-input" value="{{ request.form.get('address', '') }}">
 
                         <h2 class="title" style="margin-top: 30px;">Contact Number</h2>
-                        <input type="text" name="contact_number" placeholder="Enter your contact number" required value="{{ request.form.get('contact_number', '') }}">
+                        <input type="text" name="contact_number" placeholder="Enter your contact number" required class="required-input" value="{{ request.form.get('contact_number', '') }}">
                         
                         <h2 class="title" style="margin-top: 30px;">Gender</h2>
                         <div class="options" style="margin-top: 30px;">
                             <label>
-                                <input type="radio" name="gender" value="Male" {% if request.form.get('gender') == 'Male' %}checked{% endif %}>
+                                <input type="radio" name="gender" value="Male" required class="required-input" {% if request.form.get('gender') == 'Male' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Male</span>
                             </label>
                             <label>
-                                <input type="radio" name="gender" value="Female" {% if request.form.get('gender') == 'Female' %}checked{% endif %}>
+                                <input type="radio" name="gender" value="Female" required class="required-input" {% if request.form.get('gender') == 'Female' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Female</span>
                             </label>
@@ -77,12 +77,12 @@
                         <h2 class="title">Ever Married</h2>
                         <div class="options">
                             <label>
-                                <input type="radio" name="married" value="Yes" {% if request.form.get('married') == 'Yes' %}checked{% endif %}>
+                                <input type="radio" name="married" value="Yes" required class="required-input" {% if request.form.get('married') == 'Yes' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Yes</span>
                             </label>
                             <label>
-                                <input type="radio" name="married" value="No" {% if request.form.get('married') == 'No' %}checked{% endif %}>
+                                <input type="radio" name="married" value="No" required class="required-input" {% if request.form.get('married') == 'No' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>No</span>
                             </label>
@@ -93,22 +93,22 @@
                         <h2 class="title">Work Type</h2>
                         <div class="options">
                             <label>
-                                <input type="radio" name="workType" value="Private" {% if request.form.get('workType') == 'Private' %}checked{% endif %}>
+                                <input type="radio" name="workType" value="Private" required class="required-input" {% if request.form.get('workType') == 'Private' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Private</span>
                             </label>
                             <label>
-                                <input type="radio" name="workType" value="Government" {% if request.form.get('workType') == 'Government' %}checked{% endif %}>
+                                <input type="radio" name="workType" value="Government" required class="required-input" {% if request.form.get('workType') == 'Government' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Government</span>
                             </label>
                             <label>
-                                <input type="radio" name="workType" value="Employed" {% if request.form.get('workType') == 'Employed' %}checked{% endif %}>
+                                <input type="radio" name="workType" value="Employed" required class="required-input" {% if request.form.get('workType') == 'Employed' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Employed</span>
                             </label>
                             <label>
-                                <input type="radio" name="workType" value="Never worked" {% if request.form.get('workType') == 'Never worked' %}checked{% endif %}>
+                                <input type="radio" name="workType" value="Never worked" required class="required-input" {% if request.form.get('workType') == 'Never worked' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Never Worked</span>
                             </label>
@@ -119,12 +119,12 @@
                         <h2 class="title">Residence Type</h2>
                         <div class="options">
                             <label>
-                                <input type="radio" name="residenceType" value="Urban" {% if request.form.get('residenceType') == 'Urban' %}checked{% endif %}>
+                                <input type="radio" name="residenceType" value="Urban" required class="required-input" {% if request.form.get('residenceType') == 'Urban' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Urban</span>
                             </label>
                             <label>
-                                <input type="radio" name="residenceType" value="Rural" {% if request.form.get('residenceType') == 'Rural' %}checked{% endif %}>
+                                <input type="radio" name="residenceType" value="Rural" required class="required-input" {% if request.form.get('residenceType') == 'Rural' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Rural</span>
                             </label>
@@ -138,12 +138,12 @@
                         <h2 class="title">Exercise</h2>
                         <div class="options">
                             <label>
-                                <input type="radio" name="exercise" value="Yes" {% if request.form.get('exercise') == 'Yes' %}checked{% endif %}>
+                                <input type="radio" name="exercise" value="Yes" required class="required-input" {% if request.form.get('exercise') == 'Yes' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Yes</span>
                             </label>
                             <label>
-                                <input type="radio" name="exercise" value="No" {% if request.form.get('exercise') == 'No' %}checked{% endif %}>
+                                <input type="radio" name="exercise" value="No" required class="required-input" {% if request.form.get('exercise') == 'No' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>No</span>
                             </label>
@@ -154,12 +154,12 @@
                         <h2 class="title">Hypertension</h2>
                         <div class="options">
                             <label>
-                                <input type="radio" name="hypertension" value="Yes" {% if request.form.get('hypertension') == 'Yes' %}checked{% endif %}>
+                                <input type="radio" name="hypertension" value="Yes" required class="required-input" {% if request.form.get('hypertension') == 'Yes' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Yes</span>
                             </label>
                             <label>
-                                <input type="radio" name="hypertension" value="No" {% if request.form.get('hypertension') == 'No' %}checked{% endif %}>
+                                <input type="radio" name="hypertension" value="No" required class="required-input" {% if request.form.get('hypertension') == 'No' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>No</span>
                             </label>
@@ -170,12 +170,12 @@
                         <h2 class="title">Heart Disease</h2>
                         <div class="options">
                             <label>
-                                <input type="radio" name="heart_disease" value="Yes" {% if request.form.get('heart_disease') == 'Yes' %}checked{% endif %}>
+                                <input type="radio" name="heart_disease" value="Yes" required class="required-input" {% if request.form.get('heart_disease') == 'Yes' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Yes</span>
                             </label>
                             <label>
-                                <input type="radio" name="heart_disease" value="No" {% if request.form.get('heart_disease') == 'No' %}checked{% endif %}>
+                                <input type="radio" name="heart_disease" value="No" required class="required-input" {% if request.form.get('heart_disease') == 'No' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>No</span>
                             </label>
@@ -186,12 +186,12 @@
                         <h2 class="title">Diabetes</h2>
                         <div class="options">
                             <label>
-                                <input type="radio" name="diabetesnow" value="Yes" {% if request.form.get('diabetesnow') == 'Yes' %}checked{% endif %}>
+                                <input type="radio" name="diabetesnow" value="Yes" required class="required-input" {% if request.form.get('diabetesnow') == 'Yes' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Yes</span>
                             </label>
                             <label>
-                                <input type="radio" name="diabetesnow" value="No" {% if request.form.get('diabetesnow') == 'No' %}checked{% endif %}>
+                                <input type="radio" name="diabetesnow" value="No" required class="required-input" {% if request.form.get('diabetesnow') == 'No' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>No</span>
                             </label>
@@ -202,17 +202,17 @@
                         <h2 class="title">Blood Glucose (Fasting)</h2>
                         <div class="options">
                             <label>
-                                <input type="radio" name="blood_glucose_level" value="80-100 mg/dL" {% if request.form.get('blood_glucose_level') == '80-100 mg/dL' %}checked{% endif %}>
+                                <input type="radio" name="blood_glucose_level" value="80-100 mg/dL" required class="required-input" {% if request.form.get('blood_glucose_level') == '80-100 mg/dL' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>80-100 mg/dL</span>
                             </label>
                             <label>
-                                <input type="radio" name="blood_glucose_level" value="101-125 mg/dL" {% if request.form.get('blood_glucose_level') == '101-125 mg/dL' %}checked{% endif %}>
+                                <input type="radio" name="blood_glucose_level" value="101-125 mg/dL" required class="required-input" {% if request.form.get('blood_glucose_level') == '101-125 mg/dL' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>101-125 mg/dL</span>
                             </label>
                             <label>
-                                <input type="radio" name="blood_glucose_level" value="126+ mg/dL" {% if request.form.get('blood_glucose_level') == '126+ mg/dL' %}checked{% endif %}>
+                                <input type="radio" name="blood_glucose_level" value="126+ mg/dL" required class="required-input" {% if request.form.get('blood_glucose_level') == '126+ mg/dL' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>126+ mg/dL</span>
                             </label>
@@ -239,12 +239,12 @@
                         <h2 class="title">Alcohol</h2>
                         <div class="options">
                             <label>
-                                <input type="radio" name="alcohol" value="Yes" {% if request.form.get('alcohol') == 'Yes' %}checked{% endif %}>
+                                <input type="radio" name="alcohol" value="Yes" required class="required-input" {% if request.form.get('alcohol') == 'Yes' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Yes</span>
                             </label>
                             <label>
-                                <input type="radio" name="alcohol" value="No" {% if request.form.get('alcohol') == 'No' %}checked{% endif %}>
+                                <input type="radio" name="alcohol" value="No" required class="required-input" {% if request.form.get('alcohol') == 'No' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>No</span>
                             </label>
@@ -255,17 +255,17 @@
                         <h2 class="title">Smoking</h2>
                         <div class="options">
                             <label>
-                                <input type="radio" name="smoking" value="Never smoked" {% if request.form.get('smoking') == 'Never smoked' %}checked{% endif %}>
+                                <input type="radio" name="smoking" value="Never smoked" required class="required-input" {% if request.form.get('smoking') == 'Never smoked' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Never<br>Smoked</span>
                             </label>
                             <label>
-                                <input type="radio" name="smoking" value="Formerly smoked" {% if request.form.get('smoking') == 'Formerly smoked' %}checked{% endif %}>
+                                <input type="radio" name="smoking" value="Formerly smoked" required class="required-input" {% if request.form.get('smoking') == 'Formerly smoked' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Formerly<br>Smoked</span>
                             </label>
                             <label>
-                                <input type="radio" name="smoking" value="Smokes" {% if request.form.get('smoking') == 'Smokes' %}checked{% endif %}>
+                                <input type="radio" name="smoking" value="Smokes" required class="required-input" {% if request.form.get('smoking') == 'Smokes' %}checked{% endif %}>
                                 <span class="circle"></span>
                                 <span>Smokes</span>
                             </label>
@@ -273,12 +273,90 @@
                     </div>
                 </div>
 
-                <button type="submit" style="margin-bottom: 50px;">Submit & Calculate Prediction</button>
+                <!-- Error message above the submit button -->
+                <div id="error-message" style="display: none; color: red; font-size: 14px; margin-bottom: 10px;">
+                    Please fill out all required fields before submitting.
+                </div>
+
+                <button type="submit" id="submitButton" onclick="validateAndShowLoadingBar()" style="margin-bottom: 50px;">Submit & Calculate Prediction</button>
+
+                <!-- Loading bar element -->
+                <div id="loading-bar" style="display: none; margin-top: 10px;">
+                    <div class="loading-indicator"></div>
+                </div>
 
                 <!-- Display the prediction result -->
                 {% if diabetes_prob %}
-                <h1>Prediction Review</h1>
                 <div class="prediction">
+                <h1>Review</h1>
+                    <h2 id="results-section" class="titlesummary"><span class="spaced">My Summary</span> <span class="spaced">{{ gender }}</span> <span class="">{{ age }} years old</span></h2>
+                    <div class="prediction-review">
+                        <!-- First column (1x4) -->
+                        <div class="summary-box">
+                            {% if gender|capitalize == 'Male' %}
+                                <img src="{{ url_for('static', filename='images/male.png') }}" alt="Male Icon">
+                            {% else %}
+                                <img src="{{ url_for('static', filename='images/female.png') }}" alt="Female Icon">
+                            {% endif %}
+                            <br>Weight: {{ weight }} kg<br>Height: {{ height }} m
+                        </div>
+                    
+                        <!-- Second column (2x2) -->
+                        <div class="cell"><img src="{{ url_for('static', filename='images/bmi.png') }}" alt="Icon"><br>BMI:{{ bmi }}</div>
+                        <div class="cell"><img src="{{ url_for('static', filename='images/blood_glucose.png') }}" alt="Icon"><br>Blood Glucose:<br>{{ blood_glucose_level }}</div>
+                        <div class="cell"><img src="{{ url_for('static', filename='images/hba1c.png') }}" alt="Icon"><br>HbA1c Level:<br>{{ hba1c_level }} mg/dL</div>
+                        <div class="cell">
+                        {% if married|capitalize == 'Yes' %}
+                                <img src="{{ url_for('static', filename='images/married.png') }}" alt="Icon">
+                            {% else %}
+                                <img src="{{ url_for('static', filename='images/single.png') }}" alt="Icon">
+                            {% endif %}
+                            <br>Ever Married: {{ married }}
+                        </div>
+                    
+                        <!-- Third column (2x2) -->
+                        <div class="cell"><img src="{{ url_for('static', filename='images/worktype.png') }}" alt="Icon"><br>Work Type:<br>{{ workType }}</div>
+                        <div class="cell">
+                            {% if residenceType|capitalize == 'Urban' %}
+                                    <img src="{{ url_for('static', filename='images/urban.png') }}" alt="Icon">
+                                {% else %}
+                                    <img src="{{ url_for('static', filename='images/residence.png') }}" alt="Icon">
+                                {% endif %}
+                                <br>Residence Type:: {{ residenceType }}
+                        </div>
+                        <div class="cell">
+                            {% if exercise|capitalize == 'Yes' %}
+                                    <img src="{{ url_for('static', filename='images/exercise.png') }}" alt="Icon">
+                                {% else %}
+                                    <img src="{{ url_for('static', filename='images/no_exercise.png') }}" alt="Icon">
+                                {% endif %}
+                                <br>Exercise:{{ exercise }}
+                        </div>
+                        <div class="cell">
+                            {% if alcohol|capitalize == 'Yes' %}
+                                    <img src="{{ url_for('static', filename='images/alcohol.png') }}" alt="Icon">
+                                {% else %}
+                                    <img src="{{ url_for('static', filename='images/no_alcohol.png') }}" alt="Icon">
+                                {% endif %}
+                                <br>Alcohol:{{ alcohol }}
+                        </div>          
+                    
+                        <!-- Fourth column (2x2) -->
+                        <div class="cell">
+                            {% if smoking|capitalize == 'Never smoked' %}
+                                    <img src="{{ url_for('static', filename='images/no_smoke.png') }}" alt="Icon">
+                                {% elif smoking|capitalize == 'Formerly smoked' %}
+                                    <img src="{{ url_for('static', filename='images/quit_smoke.png') }}" alt="Icon">
+                                {% elif smoking|capitalize == 'Smokes' %}
+                                    <img src="{{ url_for('static', filename='images/smoking.png') }}" alt="Icon">
+                                {% endif %}
+                                <br>Smoking:<br>{{ smoking }}
+                        </div> 
+                        <div class="cell"><img src="{{ url_for('static', filename='images/hypertension.png') }}" alt="Icon"><br>Hypertension:{{ hypertension }}</div>
+                        <div class="cell"><img src="{{ url_for('static', filename='images/heart_disease.png') }}" alt="Icon"><br>Heart Disease:{{ heart_disease }}</div>
+                        <div class="cell"><img src="{{ url_for('static', filename='images/diabetes.png') }}" alt="Icon"><br>Diabetes:{{ diabetesnow }}</div>
+                    </div>
+                    
                     <div class="selection">
                         <h2 id="prediction-result" class="title">Cardio Probability</h2>
                         <div class="text">
@@ -305,9 +383,8 @@
                             </label>
                         </div>
                     </div>
-                </div>      
+                </div>       
                 {% endif %}
-
             </form>
         </div>
     </div>

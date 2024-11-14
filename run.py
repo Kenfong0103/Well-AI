@@ -162,7 +162,7 @@ def predict():
         cardio_prob = round(cardio_prob, 2)
         diabetes_prob = round(diabetes_prob, 2)
         stroke_prob = round(stroke_prob, 2)
-        
+
         # Prepare the data to send to the Google Apps Script web app
         data = {
             'name': name,
@@ -208,8 +208,26 @@ def predict():
         else:
             print("Failed to send data to Google Sheets.")
 
-
-        return render_template("index.html", cardio_prob=cardio_prob, diabetes_prob=diabetes_prob, stroke_prob=stroke_prob)
+        return render_template("index.html", 
+                                gender=gender,
+                                age=age,
+                                weight=weight,
+                                height=height,
+                                bmi=bmi,
+                                married=married,
+                                workType=workType,
+                                residenceType=residenceType,
+                                exercise=exercise,
+                                hypertension=hypertension,
+                                heart_disease=heart_disease,
+                                diabetesnow=diabetesnow,
+                                blood_glucose_level=blood_glucose_level,
+                                hba1c_level=hba1c_level,
+                                alcohol=alcohol,
+                                smoking=smoking,
+                                cardio_prob=cardio_prob, 
+                                diabetes_prob=diabetes_prob, 
+                                stroke_prob=stroke_prob)
 
     return render_template("index.html")
 
