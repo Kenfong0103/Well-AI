@@ -13,9 +13,20 @@ body {
     height: 100vh;
 }
 
+.two-columns {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.column {
+    flex: 1;
+    width: 100%;
+}
+
 .container {
     width: 100%;
-    max-width: 750px;
+    max-width: 1500px;
     margin: auto;
 }
 
@@ -75,10 +86,17 @@ h3 {
     text-align: left; /* 使标题靠左对齐 */
     width: 100%; /* 确保宽度为100% */
     color: #ffffff; /* Dark gray text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.titlesummary .spaced {
-    margin-right: 160px; /* Add margin between the spans */
+.spaced {
+    padding: 0 10px;
+}
+
+.titlesummary span {
+    white-space: nowrap;
 }
 
 .prediction-review {
@@ -86,10 +104,11 @@ h3 {
     grid-template-columns: 1fr 2fr 2fr 2fr;
     grid-template-rows: auto;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     width: fit-content;
+    margin: 0 auto; 
 }
 
 .summary-box {
@@ -99,7 +118,7 @@ h3 {
     justify-content: center;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     font-weight: bold;
     font-size: 0.85em;
     flex-direction: column; /* Stack items vertically */
@@ -260,7 +279,7 @@ button:hover {
 }
 
 /* 媒体查询 */
-@media (max-width: 650px) {
+@media (max-width: 970px) {
     .slider {
         width: 100%; /* Slider will expand to 100% width on small screens */
     }
@@ -299,6 +318,7 @@ button:hover {
     .prediction-review {
         grid-template-columns: 1fr;
         width: 100%; /* Make each cell take up full width */
+        margin: 0 auto; 
     }
 
     .summary-box {
@@ -313,4 +333,31 @@ button:hover {
         height: auto; /* Allow height to adjust automatically */
     }
 
+    .two-columns {
+        flex-direction: column;  /* Stack columns vertically */
+        gap: 10px;              /* Reduce gap between elements */
+    }
+
+    .column {
+        width: 100%;            /* Full width on small screens */
+    }
+
+    /* Optional: Adjust other elements for better mobile display */
+    .container {
+        padding: 10px;
+        width: 100%;
+        min-width: auto;        /* Remove any minimum width constraints */
+    }
+
+    .window {
+        padding: 10px;
+        width: 100%;
+        min-width: auto;
+    }
+
+    .titlesummary {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;  /* Add space between stacked items */
+    }
 }
